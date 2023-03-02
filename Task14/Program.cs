@@ -9,10 +9,12 @@
 Console.WriteLine("Введите число :");
 int number = Convert.ToInt32(Console.ReadLine());
 
+if (MultiplycityTwoNumbers(number)) Console.WriteLine("Yes");
+else Console.WriteLine("No");
+
 bool MultiplycityTwoNumbers(int num)
 {
     return num % 7 == 0 && num % 23 == 0;
 }
 
-if (MultiplycityTwoNumbers(number)) Console.WriteLine("Yes");
-else Console.WriteLine("No");
+
