@@ -11,5 +11,6 @@ Console.WriteLine($"Случайное число из отрезка 100 - 999 
 
 int firstDigit = number / 100;
 int thirdDigit = number % 10;
+int result = firstDigit * 10 + thirdDigit;
 
-Console.WriteLine($"Ответ -> {firstDigit}{thirdDigit}");
+Console.WriteLine(result);
