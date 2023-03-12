@@ -23,3 +23,9 @@ int Quarter(int x, int y)
     if (x > 0 && y < 0) return 4;
     return 0;
 }
+
+Math.Sqrt(5);
+Math.Pow(2, 10);
+double d = 5.09998774;
+double dRound = Math.Round(d, 2, MidpointRounding.ToZero);
+Console.WriteLine(dRound);
