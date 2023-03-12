@@ -3,7 +3,7 @@
 // соответствующие отрицательные, и наоборот.
 // [-4, -8, 8, 2] -> [4, 8, -8, -2]
 
-int[] CreateArrayRndInt (int size, int min, int max)
+int[] CreateArrayRndInt (int size, int min, int max) // метод создания массива
 {
 int[] arr = new int[size];
 Random rnd = new Random();
@@ -14,7 +14,7 @@ arr[i] = rnd.Next(min, max + 1);
 return arr;
 }
 
-void PrintArray(int[] arr)
+void PrintArray(int[] arr)  //метод вывода на печать
 {
 Console.Write("[");
 for (int i = 0; i < arr.Length; i++)
