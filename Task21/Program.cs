@@ -20,7 +20,7 @@ double length = Math.Sqrt(A * A + B * B + C * C);
 Console.WriteLine($"Расстояние {length}");
 
 
-// Функция ввода сообщения
+
 int ReadInt(string message)
 {
  Console.Write(message);
