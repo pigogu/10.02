@@ -4,53 +4,39 @@
 
 // [345, 897, 568, 234] -> 2
 
-int size = ReadInt("Введите размерность массива: ");
-int [] numbers = new int[size];
-
-FillArrayRandomNumbers(numbers);
+Console.WriteLine("Введите длину массива:  ");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] numbers = new int[size];
+RandonNumbers(numbers);
+Console.WriteLine("В этом массиве: ");
 PrintArray(numbers);
-int result = 0;
 
-for (int i = 0; i < numbers.Length; i++)
+void RandonNumbers(int[] numbers)
 {
-    if (numbers[i] % 2 == 0)
+    for(int i = 0; i < size; i++)
     {
-        result++;
-    }
-}
-if (result % 10 == 1)
-{
-    Console.WriteLine($"В массиве {result} четное число");
-}
-if (result % 10 == 2 || result % 10 == 3 || result % 10 == 4)
-{
-    Console.WriteLine($"В массиве {result} четных числа");
-}
-if (result == 0)
-{
-    Console.WriteLine($"В массиве {result} четных чисел");
-}
-// Методы
-void FillArrayRandomNumbers(int [] array) //Заполнение массива
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = new Random().Next(99, 999);
+        numbers[i] = new Random().Next(100,1000);
     }
 }
 
-void PrintArray(int[] array) //Вывод массива на экран
+
+int count = 0;
+
+for (int x = 0; x < numbers.Length; x++)
 {
-    for (int i = 0; i < array.Length; i++)
+if (numbers[x] % 2 == 0)
+count++;
+}
+Console.WriteLine($"из {numbers.Length} чисел, {count} четных");
+
+
+void PrintArray(int[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
     {
-        Console.Write(array[i] + " ");
+        Console.Write(numbers[i] + " ");
     }
+    Console.Write("]");
     Console.WriteLine();
-}
-
-
-int ReadInt(string message)  //Функция ввода
-{
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
 }
